@@ -1,0 +1,68 @@
+Spark Architecture
+* Spark uses ,aster/slave architecture 
+*Spark driver is the central coordinator
+*Spark application is a collaboration of driver and its excecutors
+* Spark has its own built in a cluster manager(standalone,hadoop-yan,apache)
+-cluster manager-numbers of nodes connected
+
+Important Terminology of Apache Spark
+1.SparkContext
+  -main entry point to spark core
+ * it offers various functions.Such as
+   -Getting the current status of spark application
+    -Cancelling the job
+    -Cancelling the stage
+    -Running job synchronously
+    -Running Job asynchronously
+    -Accessing persistent RDD
+    -Un-persistent RDD
+    -Programmable dynamic allocation
+    
+2.SparkShell
+-allows us to run /test appllication code interactively on it
+3.Spark Application
+-self contained computation to run user supplied code
+4.Task
+-unit of work we send to executor
+5.Job
+-Parallels Computations consisting of multiple tasks
+6.Stage
+-Each job divided in small set of tasks is stages
+
+Components of Spark Architecture
+
+1.Apache Spark Driver
+-runs the main function of an application.we can create Spark Context in Spark Driver
+-it is master node of spark application
+-spark drivers is the central point of entry point of spark shell.
+-this program runs the main function of an application.we can create sparkcontext in spark drivers
+
+2.Apache Spark Executor
+-executes several tasks
+-They are distributed agents those are responsible for execution of tasks.
+-Each applications has its own executor process.
+-Executors actually run for the whole life of a spark application.that is 'static allocation of executor' process
+
+3.Apache Spark Cluster Managers-(direct acyclic graph-sequence)
+*cluster manager are responsible for acquiring resources on the spark cluster.
+*Then it provides all to a spark job.
+*It works as an external services for spark.
+we have 3 types of cluster managers.
+which may reponsible for allocation and deallocation of various physical resources.Likewise memory for client spark jobs,cpu memory.
+-for a spark application to run we can launch any cluster manager(hadoop yaan,apache mesos,standalone)
+-we can select any cluster manager on the basis of goals and application.
+
+RDD
+*Resilient Distributed Data set
+*one of the abstractions on which spark architecture is based
+*Supports in memory computation over sparkcluster
+*Collection of object which is logically partitioned and immutable in nature
+*offers two operations transformations and actions
+
+DAG(Directed Acyclic Graph)
+*Directed graph which is directly connected from one node to another.This creates a sequence
+*Acyclic- no clear or loop avaliable
+*graph-it is a combination of vertieces and edges,with all the connection in a sequence
+-we can call it a sequence of computation,performed on data .
+In this graph, edge refers to transformation on top of data while vertices refer to an RDD partition
+-This helps to eleiminate the hadoop  mapreducer multistage execution model.It also provides efficient performance over hadoop.
