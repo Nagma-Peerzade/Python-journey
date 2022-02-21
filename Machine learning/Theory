@@ -1,1 +1,25 @@
+*Machine learning
+it is a data analytics technique that teaches computers to do what comes naturally to humans
+
+* how does machine learning work?
+machine learning algorithms find natural patterns in data that generates insight and help you make betteer decisions and predictions.
+
+*Building blocks
+-independent variables
+-dependent variables
+-data
+
+*Algorithms and models
+*Supervised ml algorithm(labeled data)-sample data set is already given (it is also called hypothesis)
+   null hypothesis or 
+    -clasification
+    -regression
+*unsupervised ml algorithm
+   -clustering
+    
+        
+Linear Regression (coreleation between data)   
+    y=f(y is dependent on x)
+    y=mx+c
+    y=b0+b1x
 
