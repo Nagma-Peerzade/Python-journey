@@ -23,3 +23,41 @@ Linear Regression (coreleation between data)
     y=mx+c
     y=b0+b1x
 
+Bayes Therom depends on
+*conditional probality
+*Independent Event
+*Dependent Event
+
+
+-conditional probability
+p(A/B)=P(B/A)*p(A)
+       ____________
+        P(B)
+        
+categorical output is yes or no
+p(y/(x1,x2....xn))= p(x1/y)*p(x2/y)....*p(xn/y)*p(y)
+                    ________________________________
+                       p(x1)p(x2)......p(n)
+
+*argmax(fit or unfit)
+height=0.60
+weight=0.40
+bmi=0.25
+age=0.15
+
+Naive Bayes Classifier
+-it is based on bayes theorm
+class variable(prediction or output)
+vectors(rows)
+
+Assumption
+-independent(no pair of features are dependent) 
+-equal(all the features are equally contributing)
+
+
+before event
+-positerior probabilty(p(A/B))
+-liklihood probability(p(B/A))
+-marginal probability(p(B))
+-priori probabilty(p(A))
+
